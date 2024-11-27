@@ -1,3 +1,13 @@
+/* 
+* Nombre: Zuriñe Galán 
+* Fecha: 27/11/2024 
+* Modulo: LMSGI. 
+* UD02. 
+* Tarea: LMSGI02 Tarea evaluativa 2. Sitio web
+* Autoevaluación: 
+* Descripción: Hoja de estilos del sitio web de reseñas de libros diseñado en la primera tarea de evaluación. 
+*/
+
 
 /* -------------------------------------------------------
 | ESTILOS GENERALES Y COMUNES A TODAS LAS PÁGINAS
@@ -72,7 +82,7 @@ body{
     height: 4rem; 
     display: flex;
     justify-content: center; 
-    /* Para que la navegacióin se mantenga siempre en la parte superior de la página  aunque el contenido se desplace */
+    /* Para que la navegación se mantenga siempre en la parte superior de la página  aunque el contenido se desplace */
     position: sticky; 
     top:0; 
     /*Para que quede por encima del contenido en las páginas con scroll*/
@@ -183,10 +193,10 @@ figcaption{
 
 .descripcion-contenido{
     padding: 2rem 0 0;
-    display: grid;
     font-size: 1.2rem;
     
     /* se usa grid para colocar los elementos en su sitio sin recurrir a divs adicionales */
+    display: grid;
     grid-template-areas: 
     "img img h3 h3 h3 h3" 
     "img img p1 p1 p1 p1" 
@@ -465,7 +475,6 @@ figcaption{
 }
 
 .libro img{
-    /* width: 200px; */
     height: 300px;
     position: absolute;
     left: 100px;
