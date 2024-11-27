@@ -329,7 +329,7 @@ figcaption{
     background: linear-gradient(360deg, rgb(0 0 0 / 1), rgb(0, 0, 0, 0));
     border-radius: 5px;
 
-    /*Se añade este punto porque si no en esta zona no funciona el enlace*/
+   
     pointer-events: none;
     
 } 
@@ -496,6 +496,7 @@ figcaption{
 
 .libro_rating{
     width: 60%;
+    max-width: 15rem;
     margin: 0 auto;
     color: var(--naranja);
     margin-bottom: 0;

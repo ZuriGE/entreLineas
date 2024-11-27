@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <!-- enlace a hoja de estilos -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- favicon -->
      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -24,7 +24,7 @@
     <header class="header-principal">
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="noticias_literatura.html">Noticias</a></li>
                 <li><a href="libros.html">Libros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -33,51 +33,47 @@
     </header>
 
     <!-- Título de la página -->        
-    <h1>Contacto</h1>
-
+    <h1>Noticias</h1>
     <section class="contenedor-principal">
-        <!-- Contenido principal -->
-        <main class="contacto-main">
-            <section class="texto-contacto">
+        <main class="noticias-main">
+            <header class="noticias-header">
 
-                <p>¿Tienes alguna sugerencia?</p>
-                <p>¿Quieres mandar una reseña?</p>
-                <p>¿Quieres felicitarnos por nuestro trabajo?</p>
-                <p>Ponte en contacto con nosotros a través de este formulario.</p>
+                <!-- Como no sé si se puede usar js, hacemos el cambio de pestaña por medio de enlaces-->
+                <a href="noticias_literatura.html">
+                    <h2 class="tab-noticias " >Literatura</h2>
+                </a>
+                <a href="noticias_eventos.html"> 
+                    <h2 class="tab-noticias tab-noticias-activa">Eventos</h2>
+                </a>
+                <a href="noticias_cultura.html"> 
+                    <h2 class="tab-noticias ">Cultura</h2>
+                </a>                
+                
+            </header>
+
+            <section class="noticias noticias-eventos">
+                <article class="noticia">
+                    <h3>Euskal Herriko I. Hikadromoa antolatu dute Durangoko Azokan</h3>
+                    <p>Durangoko Azokako berrikuntzetako bat izango da ZirHika taldeak sortu duen hikalarien bilgunea. Hika hitz egitea eta ongi pasatzea izango da helburua, abenduaren 7an Landako ikastetxean.</p>
+                    
+                    <a target="_blank" href="https://www.argia.eus/albistea/euskal-herriko-i-hikadromoa-antolatu-dute-durangoko-azokan">Gehiago ikusi</a>
+                </article>
+                <article class="noticia">
+                    <h3>Ayuntamiento y Obispado se enfrentan en Gasteiz por el rodaje de “Sacamantecas”</h3>
+                    <p>La alcaldesa ve “lamentable” que la Diócesis no deje filmar escenas de la película en la catedral de Santa María</p>
+                    
+                    <a target="_blank" href="https://www.noticiasdegipuzkoa.eus/cultura/2024/11/23/ayuntamiento-obispado-enfrentan-gasteiz-rodaje-8967990.html">Ver más</a>
+                </article>
+                <article class="noticia">
+                    <h3>“Kosmetikoak sendabelarrekin” liburu berriaren aurkezpena</h3>
+                    <p>Araroaren 26an arratsaldeko zazpiretan Zestoako Portale kulturgunean</p>
+                    
+                    <a target="_blank" href="https://www.argia.eus/solasaldiak/2024-11-26/kosmetikoak-sendabelarrekin-liburu-berriaren-aurkezpena">Gehiago ikusi</a>
+                </article>
             </section>
-            <form action="mailto:zgalan@birt.eus" method="post" class="formulario-contacto" enctype="text/plain">
-
-                <fieldset>
-                    <legend>Contacta con Entre Líneas</legend>
-
-                    <!-- agrupamos los campos en un div para que al alinear con flex los cuente como un elemento único -->
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label><br>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="provincia">Provincia:</label><br>
-                        <select id="provincia" name="provincia" required>
-                            <option value="" disabled selected>Seleccione una provincia</option>
-                            <option value="Araba">Araba</option>
-                            <option value="Bizkaia">Bizkaia</option>
-                            <option value="Gipuzkoa">Gipuzkoa</option>
-                            <option value="otras">Otra</option>
-                        </select>
-                    </div>
-                    <div class="form-group"> 
-                        <label for="comentario">Comentario:</label><br>
-                        <textarea id="comentario" name="comentario" rows="5" required></textarea>
-                    </div>
-                    <input type="submit" class="form-group"></input>
-                </fieldset>
-            </form>
         </main>
-    
+
+
     </section>
     
     <!-- Footer con enlaces a redes sociales -->
@@ -94,5 +90,6 @@
         <p class="licencia"xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Entre Líneas</span> by <span property="cc:attributionName">Zuriñe Galán</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
     </footer>
 
-</body>
+   
+    </body>
 </html>
