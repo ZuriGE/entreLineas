@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fuentes de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <!-- enlace a hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicon -->
+     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- script para el uso de iconos -->
+    <script src="https://kit.fontawesome.com/7cc87d6653.js" crossorigin="anonymous"></script>
+
+    <title>Entre líneas</title>
+</head>
+<body>
+
+    <!-- menú de navegación -->
+    <header class="header-principal">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias_literatura.html">Noticias</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título de la página -->        
+    <h1>Entre líneas</h1>
+
+    <section class="contenedor-principal">
+        <!-- Contenido principal -->
+        <main class="index-main">
+            <!-- Descripción principal -->
+            <section class="contenedor-descripcion">
+                <h2>Descripción</h2>
+                <article class="descripcion-contenido">
+                    <figure class="grid-area-img">
+                        
+                        <img src="img/inicio.jpg" alt="Libros apoyados en la pared entre el marco de madera de una ventana y una maceta con plantas" >
+
+                        <figcaption>Fotografía de conttonbro studio, Pexels, de uso libre </figcaption>
+                    </figure>
+                    
+                    
+                    <h3 class="grid-area-h3">¡Bienvenidos a Entre Líneas!</h3>
+                    <p class="grid-area-p1">Entre Líneas es una web dedicada a los amantes de la lectura que buscan descubrir, compartir y debatir sobre libros de todos los géneros. </p>
+                    <p class="grid-area-p2">Cada reseña que encontrarás aquíestá escrita con la intención de resaltar lo mejor (y lo no tan bueno) de cada libro. </p>
+                    <p class="grid-area-p3">Ya seas un lector casual o un devorador de libros, Entre Líneas es el lugar ideal para navegar entre opiniones, descubrir nuevas perspectivas y enriquecer tu experiencia literaria.</p>
+                    <p class="grid-area-p4"> Porque cada libro tiene más de lo que se ve a primera vista... </p>
+                    <p class="grid-area-p5">¡Vamos a leer Entre Líneas!</p>
+                    
+                    
+                
+                </article>
+            </section>
+
+            <!-- Última incorporación -->
+            <aside class="ultima-incorporacion">
+                <h2>Última Incorporación</h2>
+                <section class="ultima-contenido">
+                    <img src="img/portadas/fatal_gracias.jpg" alt="Portada del libro 'Fatal, gracias' de Oti Corona">
+                    <p>Lee nuestra última reseña:</p>
+                    <p>“Fatal, gracias”, de Oti Corona.</p>
+                   
+                         <!-- Todos los enlaces a 'detalle de libro' llevarán al mismo libro, para no generar tantas páginas adicionales -->
+
+                         <a href="detalle_libro.html"><button class="btn-libro">Ver más</button></a>
+                         <a href="https://www.elkar.eus/es/liburu_fitxa/fatal-gracias/corona-bonet-oti/9788494704390"><button class="btn-libro">Comprar</button></a>
+                     
+                </section>
+            </aside>
+        </main>
+
+    <!-- Sección de mejores valorados -->
+    <section class="mejor-valorados">
+        <h2>Mejor Valorados</h2>
+        <!-- Se hace uso de un div para posicionar en horizontal los artículos correspondientes a cada libro-->
+        <div class="mejor-valorados_contenedor">
+            <!-- Los botones no son funcionales, pero en una página real se usarían para navegar por los artículos -->
+            <button>
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+         
+            <!-- Cada libro de los mejor valorados se mete en un artículo  -->
+            <article class="mejor-valorados_articulo">                
+                <a href="#">                   
+                    <img src="img/portadas/supersaurio.jpg" alt="Artículo valorado 3" >
+                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit aut vero neque..</p>               
+                    <span class="mejor-valorados_articulo_rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </a>
+            </article>
+            <article class="mejor-valorados_articulo">                
+                <a href="#">                   
+                    <img src="img/portadas/la_mitad_evanescente.jpg" alt="Artículo valorado 3" >
+                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit aut vero neque..</p>               
+                    <span class="mejor-valorados_articulo_rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </span>
+                </a>
+            </article>
+            <article class="mejor-valorados_articulo">                
+                <a href="#">                   
+                    <img src="img/portadas/hamnet.jpg" alt="Artículo valorado 3" >
+                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit aut vero neque..</p>               
+                    <span class="mejor-valorados_articulo_rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </span>
+                </a>
+            </article>
+            <article class="mejor-valorados_articulo">                
+                <a href="#">                   
+                    <img src="img/portadas/el_evangelio_segun_jesucristo.jpg" alt="Artículo valorado 3" >
+                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit aut vero neque..</p>               
+                    <span class="mejor-valorados_articulo_rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </a>
+            </article>
+            <button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    </section>
+    
+    <!-- Footer con enlaces a redes sociales -->
+    <footer>
+        <nav aria-label="Enlaces a redes sociales">
+            <ul>
+                <li><a href="https://www.facebook.com/" title="Visita nuestro perfil de facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://x.com/" title="Visita nuestro perfil de twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/" title="Visita nuestro perfil de instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/" title="Visita nuestro perfil de tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+        <!-- Licencia -->
+        <p class="licencia"xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Entre Líneas</span> by <span property="cc:attributionName">Zuriñe Galán</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+
+</body>
+</html>

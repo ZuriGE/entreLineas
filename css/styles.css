@@ -1,0 +1,671 @@
+
+/* -------------------------------------------------------
+| ESTILOS GENERALES Y COMUNES A TODAS LAS PÁGINAS
+| ------------------------------------------------------- */
+
+/*Limpieza de estilos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--texto);
+}
+
+html,
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: var(--oscuro);
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Efecto de pulsar un boton físico */
+button:active{
+    transform: scale(0.95);
+}
+
+/*body, color de fondo*/
+body{
+    background-color: var(--claro);
+}
+
+/* variables globales */
+:root{
+    --claro: #E7E1DA;
+    --oscuro: #1E1E24;
+    --verdeC: #9BBFB2;
+    --verdeO: #0F7A58;
+    --naranja: #f7643f;
+    --marronC: #b99b7f;
+    --marronO: #917a64;
+    --amarillo: #faac05;
+    --titulos: "DM Serif Display";
+    --texto: "DM Sans";
+}
+
+/* Estilos del header y la barra de navegación */
+
+.header-principal {
+    background-color: var(--oscuro);
+    height: 4rem; 
+    display: flex;
+    justify-content: center; 
+    /* Para que la navegacióin se mantenga siempre en la parte superior de la página  aunque el contenido se desplace */
+    position: sticky; 
+    top:0; 
+    /*Para que quede por encima del contenido en las páginas con scroll*/
+    z-index: 3;
+}
+
+.header-principal nav{
+    width: 50%;
+}
+
+.header-principal nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.25rem;
+}
+
+.header-principal nav a {
+    color: var(--verdeC);
+}
+
+.header-principal nav a:hover{
+    color: var(--naranja);
+}
+
+/*Estilo del título principal de cada página*/
+h1{
+    font-family: "DM Serif Display";
+    width: 30%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+    border-top: 2px solid var(--naranja);
+    border-bottom: 2px solid var(--verdeO);
+    text-align: center;
+    color: var(--oscuro);
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+/* Valores generales del contenedor principal */
+.contenedor-principal{
+    width: 80%;
+    margin: 3rem auto;
+    flex: 1;
+}
+
+/* Estilos de footer principal*/
+
+footer{
+    background-color: var(--verdeC);
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: var(--oscuro);
+    flex-shrink: 0;
+    padding: 0.5rem 0
+}
+
+footer nav{
+    color: var(--oscuro);
+}
+
+footer i {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    color: var(--verdeO);
+}
+
+footer i:hover{
+    color: var(--naranja);
+}
+
+footer i,
+.header-principal nav a{
+    transition: color 0.2s ease;
+}
+
+.licencia{
+    font-size: 0.8rem;
+}
+
+/* -------------------------------------------------------
+| ESTILOS DE LA PÁGINA DE INICIO (index.html)
+| ------------------------------------------------------- */
+
+.index-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Descripción de la web */
+img{
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+figcaption{
+    font-size: 0.7rem;
+}
+
+.contenedor-descripcion{
+    width: 70%;
+}
+
+.descripcion-contenido{
+    padding: 2rem 0 0;
+    display: grid;
+    font-size: 1.2rem;
+    
+    /* se usa grid para colocar los elementos en su sitio sin recurrir a divs adicionales */
+    grid-template-areas: 
+    "img img h3 h3 h3 h3" 
+    "img img p1 p1 p1 p1" 
+    "img img p2 p2 p2 p2" 
+    "img img p3 p3 p3 p3" 
+    "img img p4 p4 p4 p4" 
+    "img img p5 p5 p5 p5";
+    gap: 1rem;
+
+    /* grid-template-columns: 1fr 2fr 1fr; */
+}
+
+.grid-area-img{
+    grid-area: img;
+}
+
+.descripcion-contenido h3{
+    grid-area: h3;
+    color: var(--verdeO); 
+    padding: 0;
+}
+
+.descripcion-contenido h3,
+.descripcion-contenido p{
+    padding: 0 2rem;
+}
+
+.grid-area-p1{
+    grid-area: p1;
+}
+
+.grid-area-p2{
+    grid-area: p2;
+}
+
+.grid-area-p3{
+    grid-area: p3;
+}
+
+.grid-area-p4{
+    grid-area: p4;
+}
+
+.grid-area-p5{
+    grid-area: p5;
+}   
+
+/* Última incorporación */
+
+.ultima-incorporacion{
+    background-color: var(--verdeC);
+    border-radius: 5px;
+    padding: 1rem 1% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ultima-incorporacion h2{
+    /* color: var(--verdeO); */
+    margin-bottom: 1rem;
+}
+
+.ultima-incorporacion img{
+    width: 200px;
+    margin-bottom: 2rem;
+    /*Se añade sombra a la portada del libro para un efecto 3d*/
+    -webkit-box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+    box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+}
+
+
+.ultima-contenido .btn-libro{
+    margin: 1rem 0.5rem 0 0.5rem;
+    width: 40%;
+    
+}
+
+.btn-libro{
+    padding: 0.5rem;
+    background-color: var(--verdeO);
+    border-radius: 10px;
+    color: var(--claro);
+}
+
+
+.btn-libro:hover{
+    background-color: var(--naranja);
+    font-weight: bold;
+    color: var(--oscuro);
+}
+
+/*Sección de mejor valorados*/
+
+.fa-chevron-right,
+.fa-chevron-left{
+    font-size: 1.5rem;
+}
+.fa-chevron-right:hover,
+.fa-chevron-left:hover{
+    color: var(--claro);
+}
+
+.mejor-valorados{
+    margin-top: 4rem;    
+}
+
+.mejor-valorados h2{
+    color: var(--verdeO);
+    margin-bottom: 0.5rem;    
+    
+}
+
+
+.mejor-valorados_contenedor{
+    display: flex;
+    background-color: var(--naranja);
+    padding: 2rem;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.mejor-valorados_articulo{
+    width: 15%;
+    position: relative;
+    margin: 1rem
+}
+
+/* Se hace uso del pseudo elemento ::before para crear el efecto de degradado sobre als portadas y poder colocar el texto encima con pos absolute*/
+
+.mejor-valorados_articulo::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgb(0 0 0 / 1), rgb(0, 0, 0, 0));
+    border-radius: 5px;
+
+    /*Se añade este punto porque si no en esta zona no funciona el enlace*/
+    pointer-events: none;
+    
+} 
+.mejor-valorados_articulo img{
+    width: 100%;
+    height: auto; 
+    object-fit: contain;
+}
+
+
+.mejor-valorados_articulo p{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    color: var(--claro);
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.mejor-valorados_articulo_rating{
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+}
+
+.mejor-valorados_articulo_rating,
+.libro_rating{
+    color: var(--amarillo);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* -------------------------------------------------------
+| ESTILOS DE LA PÁGINA DE NOTICIAS (noticias.html)
+| ------------------------------------------------------- */
+
+.noticias-header{
+    display: flex;
+}
+
+.noticias-header h2:first-child{
+    border-top-left-radius: 5px;
+}
+.noticias-header h2:last-child{
+    border-top-right-radius: 5px;
+}
+
+.noticias-header h2{    
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--marronO);
+    cursor: pointer;
+}
+
+.noticias-header h2.tab-noticias-activa{
+    background-color: var(--marronC);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.noticias,
+.noticias-header{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.noticias{
+   
+    background-color: var(--marronC);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    display: grid;
+    grid-column: 1fr;
+    padding: 3rem 5rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.noticia{
+    padding: 1rem;
+    background-color: var(--claro);
+    border-radius: 5px;
+    
+
+}
+
+.noticia h3{
+    font-family: var(--titulos);
+    font-size: 1.5rem;
+}
+
+.noticias h3,
+.noticias p{
+    margin-bottom: 1rem;
+}
+
+.noticia a{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--verdeO)
+}
+
+/* -------------------------------------------------------
+| ESTILOS DE LA PÁGINA DE LIBROS (libros.html)
+| ------------------------------------------------------- */
+
+.contenedor-principal.contenedor-libros{
+    display: grid;
+    /*el grid ajusta de forma automática el numero de columnas según los elementos que haya yy el tamaño del vp*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 16px; 
+    place-items: center;
+
+
+}
+
+.libro{
+    width: 400px;
+    height: 560px;
+    background-color: var(--verdeC);
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    /*se añade margen superior para que la img posicionada con absolut no se monte sobre otros elementos*/
+    margin-top: 140px;
+    margin-bottom: 4rem;
+}
+
+.libro img{
+    /* width: 200px; */
+    height: 300px;
+    position: absolute;
+    left: 100px;
+    top: -100px;
+     /*Se añade sombra a la portada del libro */
+     -webkit-box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+     -moz-box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+     box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+}
+
+
+
+.libro h2{
+    font-family: var(--titulos);
+    font-size: 1.5rem;
+    color: var(--oscuro);
+    margin-top: 220px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--claro);
+    text-align: center;
+}
+
+.libro p{
+    margin-bottom: 0.5rem;
+    
+}
+
+.libro_rating{
+    width: 60%;
+    margin: 0 auto;
+    color: var(--naranja);
+    margin-bottom: 0;
+}
+
+.btn-contenedor{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 1rem 0;
+    
+}
+
+.btn-contenedor a{
+    width: 50%;
+    text-align: center;
+}   
+
+.btn-contenedor .btn-libro{
+    width: 70%;
+}  
+
+/* -------------------------------------------------------
+| ESTILOS DE LA PÁGINA DETALLE-LIBRO (detalle_libro.html)
+| ------------------------------------------------------- */
+.contenedor-principal-detalle{
+    display: flex;
+    margin-top: 5rem;
+}
+
+.datos-libro{
+    padding: 0 5rem;
+}
+
+.datos-libro p{
+    margin-bottom: 0.5rem;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+td,
+th{
+    font-weight: 300;
+    padding: 0.1rem ;
+}
+
+th{
+    text-align: start
+}
+
+.ficha-libro{
+    margin-top: 2rem;
+    padding:1rem;
+    background-color: var(--marronC);
+    border-radius: 5px;
+    /*Sombra*/
+    -webkit-box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+    box-shadow: -4px 7px 47px -8px rgba(0,0,0,0.75);
+
+}
+
+
+
+.detalle-libro-abajo{
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.contenedor-btn-detalle{    
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-btn-detalle a{
+    width: 50%;
+}
+
+.contenedor-btn-detalle .libro_rating{
+    width: 60%;
+    margin-bottom: 2rem;
+    color: var(--amarillo);
+}
+
+.btn-detalle-libro{
+    width: 100%;
+    height: 4rem;
+    font-size: inherit;
+}
+
+/* -------------------------------------------------------
+| ESTILOS CONTACTO (contacto.html)
+| ------------------------------------------------------- */
+.contacto-main{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-contacto{
+    width: 50%;
+    padding: 1.2rem 2rem 2rem;
+    background-color: var(--verdeC);
+    border-radius: 5px;
+}
+
+.formulario-contacto legend{
+    font-size: 1.2rem;
+    color: var(--verdeO);
+    margin: 1rem;
+    padding: 0 0.5rem;
+}
+
+fieldset{
+    border: 2px solid var(--naranja);
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.form-group{
+    margin: 0.5rem;
+    padding: 0 auto;
+    width: 80%;
+}
+
+textarea,
+input,
+select{
+    width: 100%;
+    height: 2rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--claro);
+    border: none;
+    outline: none;
+    border-radius: 2px ;
+}
+
+textarea{
+    /* impedir que se redimensione horizontalmente y descuadre todo */
+    resize: vertical;
+    padding:0.5rem;
+    height: 4rem;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: var(--oscuro);
+    color: var(--claro);
+}
+
+.texto-contacto{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-contacto p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: end;
+}
+/*
